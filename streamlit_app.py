@@ -24,8 +24,8 @@ def load_data():
         model="gpt-3.5-turbo",
         temperature=0.2,
         system_prompt="""You are an attorney at law - expert on 
-        the analizing documentation and your 
-        job is to answer legal related questions. 
+        analizing documentation. Your 
+        job is to answer questions to legal documnets, contracts or policies. 
         Assume that all questions are related 
         to the Rental agreements. Keep 
         your answers based on 
