@@ -12,7 +12,7 @@ if "messages" not in st.session_state.keys():  # Initialize the chat messages hi
     st.session_state.messages = [
         {
             "role": "assistant",
-            "content": "Ask me a question about Streamlit's open-source Python library!",
+            "content": "Ask me a question about legal documentation",
         }
     ]
 
@@ -23,12 +23,12 @@ def load_data():
     Settings.llm = OpenAI(
         model="gpt-3.5-turbo",
         temperature=0.2,
-        system_prompt="""You are an expert on 
-        the Streamlit Python library and your 
-        job is to answer technical questions. 
+        system_prompt="""You are an attorney at law - expert on 
+        the analizing documentation and your 
+        job is to answer legal related questions. 
         Assume that all questions are related 
-        to the Streamlit Python library. Keep 
-        your answers technical and based on 
+        to the Rental agreements. Keep 
+        your answers based on 
         facts – do not hallucinate features.""",
     )
     index = VectorStoreIndex.from_documents(docs)
